@@ -25,12 +25,13 @@ for file in os.listdir():
                     for lines in next_n_lines:
 
                         try:
-                            i = i + 1
+
                             user_id = get_user_id(lines)
                             # реализация бизнес логики
                             if user_id in user_ids and len(user_ids) > 0:
                                 arr_line_logs_result.append(lines)
                                 user_ids.remove(user_id)
+                            i = i + 1
                         except:
                             arr_errors_one.append(lines)
 print("успешно оббработанных строк:{}".format(i))
