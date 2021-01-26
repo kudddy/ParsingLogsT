@@ -28,7 +28,7 @@ for file in os.listdir():
                             if log_event(lines) == "100" and get_user_id(lines) in user_ids:
                                 # тут бизнес смысл
                                 arr_os_user_id_cond.append("файл:" + file + "|  "+"ид сессии:"+ get_sension_id(lines) +"|  "+"os_user_id:"+ get_os_user_id(lines) + "\n")
-                                j = j + 1
+                            j = j + 1
                         except:
                             arr_errors_two.append(lines)
 print("успешно оббработанных строк:{}".format(j))
