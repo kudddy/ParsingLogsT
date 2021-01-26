@@ -23,8 +23,9 @@ for file in os.listdir():
                 else:
                     # тут процессим наши строки
                     for lines in next_n_lines:
-                        i = i + 1
+
                         try:
+                            i = i + 1
                             user_id = get_user_id(lines)
                             # реализация бизнес логики
                             if user_id in user_ids and len(user_ids) > 0:
